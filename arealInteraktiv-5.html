@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        let length = prompt("Angiv en længe");
+
+        let width = prompt("Angiv en bredde");
+
+        let area = length * width;
+
+        if (Number(length) && Number(width)) {
+            alert("Arealet er = " + area);
+            location.reload();
+        } else {
+            alert("Kan ikke regne ud!");
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
