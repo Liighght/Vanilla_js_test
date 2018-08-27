@@ -1,6 +1,6 @@
 let height = 3;
 let width = 5;
 
-area = height * width;
+let area = height * width;
 
-console.log("Arealet er = " + area);
+console.log("Højden er = " + height + " og bredden er = " + width + ". Arealet er = " + area);
