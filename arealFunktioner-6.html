@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        function arealBeregning(l, w) {
+            console.log("arealBeregning er kaldt!");
+
+            if (Number(l) && Number(w)) {
+                return "Arealet er " + l * w + " kvadratmeter!";
+            } else {
+                return "Kan ikke regne det ud";
+            }
+        }
+
+
+        function brugerKontakt() {
+
+            console.log("brugerKontakt er kaldt");
+
+            let length = prompt("Hvad er længden?");
+            let width = prompt("Hvad er bredden?");
+            let besked = arealBeregning(length, width);
+
+            alert(besked);
+
+            if (confirm("Vil du starte forfra?")) {
+                brugerKontakt();
+            }
+        }
+
+        brugerKontakt();
+    </script>
+</body>
+
+</html>
