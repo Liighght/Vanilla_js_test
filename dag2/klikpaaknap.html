@@ -10,6 +10,10 @@
             color: cornflowerblue;
         }
 
+        img {
+            width: 100%;
+        }
+
         #box,
         #bax {
             width: 200px;
@@ -55,15 +59,24 @@
             BOX.textContent = "KLIK";
         });
 
+
         SLET.addEventListener("click", () => {
             console.log("Teksten er slettet");
-            BOX.textContent = " ";
+            BOX.textContent = "";
         });
 
         HTML.addEventListener("click", () => {
             console.log("HTML er klikket");
             BOX.innerHTML = "<h2>Her er et billede</h2>" + "<img src ='https://ih1.redbubble.net/image.30284985.6375/flat,550x550,075,f.jpg'>";
         });
+
+        FLYT.addEventListener("click", flytFunktion);
+
+        function flytFunktion() {
+            const boxHTML = BOX.innerHTML;
+            BOX.innerHTML = "";
+            document.querySelector("#bax").innerHTML = boxHTML;
+        }
     </script>
 </body>
 
