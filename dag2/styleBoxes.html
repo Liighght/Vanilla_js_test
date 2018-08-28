@@ -10,6 +10,43 @@
             color: burlywood;
         }
 
+        .redSquare {
+            background-color: red;
+            border-radius: 100px;
+            transition: all 2s;
+        }
+
+        .greenBox {
+            background-color: darkgreen;
+            transition: all 2s;
+        }
+
+        .pinkDiamond {
+            background-color: hotpink;
+            transform: rotate(225deg);
+            transition: all 4s;
+        }
+
+        .bluePulse {
+            background-color: deepskyblue;
+            border-radius: 100px;
+            transition: all 2s;
+            animation-name: blue_pulse_kf;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes blue_pulse_kf {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.5);
+            }
+        }
+
         .box {
             display: inline-block;
             width: 10vw;
@@ -31,6 +68,30 @@
     <div class="box" id="box4"></div>
 
     <script>
+        const BOX1 = document.querySelector("#box1");
+        const BOX2 = document.querySelector("#box2");
+        const BOX3 = document.querySelector("#box3");
+        const BOX4 = document.querySelector("#box4");
+
+        BOX1.addEventListener("click", () => {
+            console.log("box1 er klikket");
+            BOX1.classList.add('redSquare');
+        });
+
+        BOX2.addEventListener("click", () => {
+            console.log("box2 er klikket");
+            BOX2.classList.add('greenBox');
+        });
+
+        BOX3.addEventListener("click", () => {
+            console.log("box3 er klikket");
+            BOX3.classList.add('pinkDiamond');
+        });
+
+        BOX4.addEventListener("click", () => {
+            console.log("box4 er klikket");
+            BOX4.classList.add('bluePulse');
+        });
     </script>
 </body>
 
