@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Øvelse - Knapper</title>
+    <style>
+        h2 {
+            color: cornflowerblue;
+        }
+
+        #box,
+        #bax {
+            width: 200px;
+            height: 200px;
+            background-color: wheat;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        button {
+            font-size: 2rem;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="klik">
+        Klik
+    </button>
+    <button id="slet">
+        Slet
+    </button>
+    <button id="html">
+        Html
+    </button>
+    <button id="flyt">
+        Flyt
+    </button>
+    <div id="box"></div>
+    <div id="bax"></div>
+
+    <script>
+        const KLIK = document.querySelector("#klik");
+        const SLET = document.querySelector("#slet");
+        const HTML = document.querySelector("#html");
+        const FLYT = document.querySelector("#flyt");
+        const BOX = document.querySelector("#box");
+
+        KLIK.addEventListener("click", () => {
+            console.log("KLIK er klikket");
+            BOX.textContent = "KLIK";
+        });
+
+        SLET.addEventListener("click", () => {
+            console.log("Teksten er slettet");
+            BOX.textContent = " ";
+        });
+
+        HTML.addEventListener("click", () => {
+            console.log("HTML er klikket");
+            BOX.innerHTML = "<h2>Her er et billede</h2>" + "<img src ='https://ih1.redbubble.net/image.30284985.6375/flat,550x550,075,f.jpg'>";
+        });
+    </script>
+</body>
+
+</html>
